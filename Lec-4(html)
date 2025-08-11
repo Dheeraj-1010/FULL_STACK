@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML Forms</title>
+</head>
+<body>
+
+    <!-- First Form -->
+    <form>
+        <label for="email">Enter Email ID:</label>
+        <input type="text" id="email" placeholder="Enter your email here:">
+        <br><br>
+
+        <label for="password">Enter Password:</label>
+        <input type="text" id="password">
+        <br><br>   
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- Second Form -->
+    <form>
+        <fieldset>
+            <legend>HTML Form Dummy</legend>
+
+            <label for="datepicker">Choose Date:</label>
+            <input type="date" id="datepicker">
+            <br><br>
+
+            <label for="selector1">Choose your Dish:</label>
+            <select name="dishes" id="selector1">
+                <option value="maggi">Maggi</option>
+                <option value="kurkure">Kurkure</option>
+                <option value="chips">Chips</option>
+            </select>
+            <br><br>
+
+            <button>Main Hu Button</button>
+            <br><br>
+
+            <textarea name="textArea1" id="textArea1" cols="15" rows="2" placeholder="Enter text here..."></textarea>
+        </fieldset>
+    </form>
+
+    <hr>
+
+    <!-- Third Form -->
+    <form>
+        <label for="textfield1">TextField:</label>
+        <input type="text" name="textfield1" id="textfield1">
+        <br><br>
+
+        <label for="button1">Button:</label>
+        <input type="submit" name="button1" id="button1" value="Subscribe">
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label for="radio1">Male:</label>
+        <input type="radio" name="gender" id="radio1" value="male">
+
+        <label for="radio2">Female:</label>
+        <input type="radio" name="gender" id="radio2" value="female">
+
+        <label for="radio3">Prefer not to say:</label>
+        <input type="radio" name="gender" id="radio3" value="na">
+        <br><br>
+
+        <!-- Checkboxes -->
+        <label for="checkbox1">English:</label>
+        <input type="checkbox" name="language" id="checkbox1" value="english">
+
+        <label for="checkbox2">Hindi:</label>
+        <input type="checkbox" name="language" id="checkbox2" value="hindi">
+        <br><br>
+
+        <!-- File Upload -->
+        <label for="fileselect1">Upload:</label>
+        <input type="file" name="fileselect1" id="fileselect1">
+        <br><br>
+
+        <!-- Image Button -->
+        <input type="image" name="imageButton1" id="imageButton1" alt="click here" src="button1.png" height="20" width="20">
+        <br><br>
+
+        <!-- Password -->
+        <label for="password1">Enter Password:</label>
+        <input type="password" name="password1" id="password1">
+        <br><br>
+
+        <!-- Date -->
+        <label for="datepicker1">Enter Date:</label>
+        <input type="date" name="datepicker1" id="datepicker1">
+    </form>
+
+</body>
+</html>
