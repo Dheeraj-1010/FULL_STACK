@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merged Responsive Layout</title>
+    <style>
+        /* ---------- First Section: Single Box with Color Change on Media Query ---------- */
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+            border: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 300px) and (max-width: 500px) {
+            .box {
+                background-color: green;
+            }
+        }
+
+        /* ---------- Second Section: Flex Container with 4 Boxes ---------- */
+        .flex-container {
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+        }
+        .flex-box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid brown;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        #box1 {
+            background-color: aqua;
+            color: black;
+        }
+        #box2 {
+            background-color: blue;
+        }
+        #box3 {
+            background-color: orange;
+        }
+        #box4 {
+            background-color: brown;
+        }
+        @media (min-width: 640px) {
+            .flex-container {
+                flex-direction: row;
+            }
+        }
+        @media (max-width: 640px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        /* ---------- Third Section: Two-Column Layout with Image ---------- */
+        .two-column-container {
+            border: 2px solid black;
+            background-color: bisque;
+            display: flex;
+            flex-direction: row;
+            width: 450px;
+            padding: 2px;
+            margin: 10px auto;
+        }
+        #boxleft {
+            background-color: aquamarine;
+            border: 1px solid blue;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+        #boxright {
+            background-color: yellow;
+            border: 1px solid brown;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            border: 1px solid red;
+            padding: 5px;
+            margin: 3px 0;
+        }
+        img {
+            width: 170px;
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 640px) {
+            .two-column-container {
+                flex-direction: column;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <div class="box">
+        Hello Jee
+    </div>
+
+    <!-- Section 2 -->
+    <div class="flex-container">
+        <div class="flex-box" id="box1">Box 1</div>
+        <div class="flex-box" id="box2">Box 2</div>
+        <div class="flex-box" id="box3">Box 3</div>
+        <div class="flex-box" id="box4">Box 4</div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="two-column-container">
+        <div id="boxleft">
+            <p>Text1</p>
+            <p>Text2</p>
+        </div>
+        <div id="boxright">
+            <img src="bSinghji.jpeg" alt="Example Image" />
+        </div>
+    </div>
+
+</body>
+</html>
