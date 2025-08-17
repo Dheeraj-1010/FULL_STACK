@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Grid Examples in One File</title>
+
+  <!-- ✅ First CSS (gridstyle.css) -->
+  <style>
+    .container1 {
+      height: 100%;
+      width: 100%;
+      background-color: rgb(69, 62, 62);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 200px);
+      gap: 0.4rem;
+      padding: 2rem;
+      border: 2px solid white;
+      place-items: center;
+      margin-bottom: 3rem;
+    }
+    .container1 .item {
+      background-color: rgb(49, 206, 14);
+      border: 5px solid rgb(217, 202, 202);
+    }
+  </style>
+
+  <!-- ✅ Second CSS (styles.css) -->
+  <style>
+    .container2 {
+      background-color: rgb(59, 57, 57);
+      display: grid;
+      padding: 2rem;
+      gap: 1rem;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+    .container2 .item {
+      background-color: rgb(94, 94, 194);
+      border: 5px solid black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .container2 {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .container2 .header, 
+      .container2 .footer {
+        grid-column: 1 / 4;
+      }
+      .container2 .sidebar {
+        grid-row: 2 / 4;
+      }
+      .container2 .content1 {
+        grid-column: 2 / 4;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- ✅ First Grid Example -->
+  <h2 style="text-align:center; color:white;">Grid Example 1</h2>
+  <div class="container1">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+  </div>
+
+  <!-- ✅ Second Grid Example -->
+  <h2 style="text-align:center; color:white;">Grid Example 2</h2>
+  <div class="container2">
+    <div class="item header">Header</div>
+    <div class="item sidebar">Sidebar</div>
+    <div class="item content1">Content1</div>
+    <div class="item">Content2</div>
+    <div class="item">Content3</div>
+    <div class="item footer">Footer</div>
+  </div>
+
+</body>
+</html>
