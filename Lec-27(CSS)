@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Examples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      text-align: center;
+      padding: 1rem;
+      background: #444;
+      margin-bottom: 1rem;
+    }
+
+    /* ---------- First Example: Grid Template Areas ---------- */
+    .container-areas {
+      width: 100%;
+      min-height: 60vh;
+      display: grid;
+      gap: 1rem;
+      background-color: rgb(79, 75, 75);
+      padding: 2rem;
+      grid-template-areas: 
+        "header header header"
+        "sidebar content1 content1"
+        "sidebar content2 content3"
+        "footer footer footer";
+    }
+    .items {
+      background-color: rgb(82, 82, 184);
+      border: 2px solid black;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+    #header { grid-area: header; }
+    #sidebar { grid-area: sidebar; }
+    #content1 { grid-area: content1; }
+    #content2 { grid-area: content2; }
+    #content3 { grid-area: content3; }
+    #footer { grid-area: footer; }
+
+    /* ---------- Second Example: Responsive Grid ---------- */
+    .container-responsive {
+      width: 100%;
+      min-height: 60vh;
+      padding: 2rem;
+      display: grid;
+      gap: 1rem;
+      background-color: rgb(71, 65, 65);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    }
+    .item {
+      padding: 1rem;
+      border: 3px solid black;
+      background-color: rgb(85, 85, 208);
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Example -->
+  <h2>Grid Template Areas Example</h2>
+  <div class="container-areas">
+    <div class="items" id="header">Header</div>
+    <div class="items" id="sidebar">Sidebar</div>
+    <div class="items" id="content1">Content1</div>
+    <div class="items" id="content2">Content2</div>
+    <div class="items" id="content3">Content3</div>
+    <div class="items" id="footer">Footer</div>
+  </div>
+
+  <!-- Second Example -->
+  <h2>Responsive Grid Example</h2>
+  <div class="container-responsive">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <div class="item">I</div>
+    <div class="item">J</div>
+    <div class="item">K</div>
+  </div>
+
+</body>
+</html>
