@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merged Cards</title>
+  <style>
+    /* -------- CARD 1 (QR Code) -------- */
+    .container1 {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card1 {
+      width: 360px;
+      height: 570px;
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+    .card1 img { height: 57%; border-radius: 10px; }
+    .card1 h2 { font-weight: bold; font-size: 1.5rem; text-align: center; }
+    .card1 p { font-size: 1.2em; text-align: center; }
+
+
+    /* -------- CARD 2 (Order Summary) -------- */
+    .container2 {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card2 {
+      width: 400px;
+      height: 600px;
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+    .card2 img {
+      width: 100%;
+      height: 30%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .card2 .textBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 75%;
+      text-align: center;
+    }
+    .card2 #amountBox {
+      width: 80%;
+      height: 10%;
+      background-color: #8BC6EC;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .card2 #leftBox {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .card2 .imgBox img { height: 3.5rem; width: 3.5rem; }
+    .card2 #paymentButton {
+      width: 80%;
+      height: 9%;
+      background-color: rgb(22, 22, 79);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .card2 .cancelBox a {
+      text-decoration: none;
+      color: rgb(46, 43, 43);
+      font-weight: bold;
+      font-size: large;
+    }
+
+
+    /* -------- CARD 3 (Business Insights) -------- */
+    .container3 {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(160deg, #10678d 0%, #464963 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card3 {
+      width: 1000px;
+      height: 500px;
+      background: #4e094c;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+    .card3:hover::before { left: 0%; }
+    .card3::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: left 5s ease;
+    }
+    .card3 .textBox {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      color: white;
+    }
+    .card3 .imgBox {
+      width: 50%;
+      height: 100%;
+      background: white url('images/icon.jpg') center/contain no-repeat;
+    }
+    .card3 #contentBox {
+      width: 75%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 65px;
+    }
+    .card3 h1 { font-size: 2.4rem; }
+    .card3 #descBox p { font-size: 1.1rem; }
+    .card3 #statsBox {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card3 #number { font-size: 1.7rem; font-weight: bold; }
+    .card3 #unit { font-size: smaller; }
+  </style>
+</head>
+<body>
+
+  <!-- CARD 1 -->
+  <section class="container1">
+    <div class="card1">
+      <img src="images/qrcode.png" />
+      <h2>Improve your front end skills by developing Projects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, velit quod obcaecati voluptatem minus quasi praesentium quia.</p>
+    </div>
+  </section>
+
+  <!-- CARD 2 -->
+  <section class="container2">
+    <div class="card2">
+      <img src="images/icon.jpg" />
+      <div class="textBox">
+        <h2>Order Summary</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure asperiores nam, recusandae necessitatibus ad quia dicta voluptas doloremque nulla.</p>
+      </div>
+      <div id="amountBox">
+        <div id="leftBox">
+          <div class="imgBox">
+            <img src="images/music.png" />
+          </div>
+          <div id="textAmountBox">
+            <p>Amount</p>
+            <p>$99.9/year</p>
+          </div>
+        </div>
+        <div class="rightBox">
+          <a href="#">Change</a>
+        </div>
+      </div>
+      <button id="paymentButton">Proceed to Payment</button>
+      <div class="cancelBox">
+        <a href="#">Cancel Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARD 3 -->
+  <section class="container3">
+    <div class="card3">
+      <div class="textBox">
+        <div id="contentBox">
+          <h1>Get insights that help your business grow</h1>
+          <div id="descBox">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsum odit eaque accusantium totam repellendus minus sit.</p>
+          </div>
+          <div id="statsBox">
+            <div>
+              <div id="number">10K+</div>
+              <div id="unit">Comments</div>
+            </div>
+            <div>
+              <div id="number">214</div>
+              <div id="unit">Paid Users</div>
+            </div>
+            <div>
+              <div id="number">12M+</div>
+              <div id="unit">Views</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="imgBox"></div>
+    </div>
+  </section>
+
+</body>
+</html>
