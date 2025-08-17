@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Projects</title>
+
+  <!-- First CSS (2D Transform Box) -->
+  <style>
+    .container1 {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 5px solid black; /* just a separator */
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: beige;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 3s linear 1s;
+    }
+
+    .box:hover {
+      transform: translate(200px, 200px);
+    }
+
+    .box p {
+      font-size: 36px;
+    }
+  </style>
+
+  <!-- Second CSS (Blog Cards) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container2 {
+      max-width: 66vw;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+    }
+
+    .header_container {
+      margin-bottom: 2.8rem;
+    }
+
+    .header_title {
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+      line-height: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .header_desc {
+      max-width: 568px;
+      text-align: center;
+      color: rgb(105, 99, 99);
+      margin: 0 auto;
+    }
+
+    .main_container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+      justify-content: center;
+    }
+
+    .card_container {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(233, 224, 224);
+      border-radius: 8px;
+    }
+
+    .card_image_container {
+      position: relative;
+      overflow: hidden;
+      height: 12rem;
+    }
+
+    .card_image {
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .card_container:hover .card_image {
+      transform: scale(1.1);
+    }
+
+    .card_title_container {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .card_title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: rgb(25, 23, 23);
+    }
+
+    .card_title_anchor:hover .card_title {
+      color: rgb(67, 67, 191);
+    }
+
+    .card_desc {
+      color: rgb(113, 107, 107);
+      font-size: 1rem;
+    }
+
+    .card_footer_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .author_container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author_avatar_container {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .author_avatar {
+      height: 100%;
+      width: 100%;
+    }
+
+    .author_name {
+      color: rgb(38, 38, 149);
+    }
+
+    .author_date {
+      color: rgb(136, 126, 126);
+    }
+
+    .card_tag_container {
+      font-size: 0.79rem;
+      border: 1px solid rgb(76, 71, 71);
+      border-radius: 4px;
+      line-height: 1.3rem;
+      padding: 0.25rem 0.5rem;
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Project (Transform Box) -->
+  <div class="container1">
+    <div class="box">
+      <p>This is CodeHelp's box</p>
+    </div>
+  </div>
+
+  <!-- Second Project (Blog Cards) -->
+  <div class="container2">
+    <header class="header_container">
+      <h1 class="header_title">CodeHelp Blogs</h1>
+      <p class="header_desc">A blog section with cards.</p>
+    </header>
+
+    <main class="main_container">
+      <div class="card_container">
+        <a href="#" class="card_image_container">
+          <img src="https://source.unsplash.com/random/600x400?technology"
+               alt="card 1" class="card_image">
+        </a>
+        <div class="card_title_container">
+          <h2 class="card_title">New Gadgets Released</h2>
+          <p class="card_desc">Check out the latest gadgets in tech.</p>
+        </div>
+        <div class="card_footer_container">
+          <div class="author_container">
+            <div class="author_avatar_container">
+              <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John"
+                   alt="avatar" class="author_avatar">
+            </div>
+            <div>
+              <span class="author_name">John Doe</span><br>
+              <span class="author_date">Sept 19, 2021</span>
+            </div>
+          </div>
+          <span class="card_tag_container">Technology</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
